@@ -47,6 +47,14 @@ This repository provides a visualization of bikeshare stations and their proximi
 - [Mapbox GL JS](https://www.mapbox.com/)  
 - [OpenStreetMap](https://www.openstreetmap.org/)  
 
+### 開発環境（Vite）
+1. 依存関係をインストール  
+   `npm install`
+2. `.env.example` をコピーして `.env` を作成し、Mapboxトークンを設定  
+   `VITE_MAPBOX_ACCESS_TOKEN=...`
+3. 開発サーバーを起動  
+   `npm run dev`
+
 ---
 
 ## 🇬🇧 English
@@ -63,6 +71,14 @@ This repository provides a visualization of bikeshare stations and their proximi
 ### Technologies
 - [Mapbox GL JS](https://www.mapbox.com/)  
 - [OpenStreetMap](https://www.openstreetmap.org/)  
+
+### Development (Vite)
+1. Install dependencies  
+   `npm install`
+2. Copy `.env.example` to `.env`, then set your Mapbox token  
+   `VITE_MAPBOX_ACCESS_TOKEN=...`
+3. Start local server  
+   `npm run dev`
 
 ---
 
