@@ -12,14 +12,26 @@
     </div>
     <div id="topbar-right">
       <div id="topbar-buttons">
-        <a href="https://twitter.com/intent/tweet?text=『🚲 つながれ！シェアサイクルマップ』%0A%0A・自転車で行き来しやすい“ネットワーク”としてのつながりを表現しました。%0A&url=https://keijipoon.github.io/sharecycle-map/" target="_blank" class="share-button">Xで共有</a>
+        <a id="share-link" target="_blank" rel="noopener noreferrer" class="share-button">Xで共有</a>
       </div>
     </div>
   </div>
 
-  <div id="map"></div>
+  <div id="searchbar" role="search" aria-label="地名・住所の検索">
+    <p id="search-status" role="status">検索を準備しています…</p>
+    <div id="geocoder-container" class="map-control"></div>
+  </div>
 
-  <div id="geocoder-container" class="map-control"></div>
+  <main id="map-region" aria-label="シェアサイクルマップ">
+    <div id="map"></div>
+    <section id="map-status" aria-live="polite" aria-atomic="true">
+      <div class="map-status-card">
+        <h2>地図の表示について</h2>
+        <p id="map-status-message">地図を読み込んでいます…</p>
+        <p>このサイトは、シェアサイクルのポートと近隣ネットワークを地図で紹介しています。地図を表示できない場合も、説明と凡例をご覧いただけます。</p>
+        <button id="map-retry" type="button" hidden>再試行</button>
+      </div>
+    </section>
 
   <div id="info-overlay">
     <h1>つながれ！シェアサイクルマップ：駐輪台数と近隣ネットワーク</h1>
@@ -35,6 +47,8 @@
       <div><span class="color-yellow"></span>HELLO CYCLING</div>
     </div>
   </div>
+
+  </main>
 
   <script type="module" src="/src/main.js"></script>
 </body>

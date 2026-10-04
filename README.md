@@ -3,7 +3,7 @@
 このリポジトリは、シェアサイクルのポート（ステーション）の位置と、近接ネットワークを可視化する地図プロジェクトです。  
 This repository provides a visualization of bikeshare stations and their proximity network.
 
-👉 デモサイト / Demo site: [つながれ！シェアサイクルマップ](https://keijipoon.github.io/sharecycle-map/)
+👉 デモサイト / Demo site: [つながれ！シェアサイクルマップ](https://kg-b0mbe.github.io/sharecycle-map/)
 
 ---
 
@@ -54,6 +54,11 @@ This repository provides a visualization of bikeshare stations and their proximi
    `VITE_MAPBOX_ACCESS_TOKEN=...`
 3. 開発サーバーを起動  
    `npm run dev`
+4. 回帰テストと本番ビルドを確認
+   `npm test` / `npm run build`
+
+公開URLと検索設定は `src/config.js` にまとめています。公開URLを変更する場合は、このREADMEのデモリンクも更新してください。
+WebGL 2非対応、地図の初期化失敗、トークン未設定の場合は説明と再試行ボタンを表示します。テストはSDKをモックし、通信や位置情報の許可なしで実行します。実際の地図描画はWebGL 2対応ブラウザーと有効なMapboxトークンで別途確認してください。
 
 ---
 
@@ -79,6 +84,11 @@ This repository provides a visualization of bikeshare stations and their proximi
    `VITE_MAPBOX_ACCESS_TOKEN=...`
 3. Start local server  
    `npm run dev`
+4. Run regression tests and the production build
+   `npm test` / `npm run build`
+
+The canonical site URL and search options live in `src/config.js`. If the URL changes, also update the demo link in this README.
+Unsupported WebGL 2, startup failures, and missing tokens show an explanation and retry button. Tests mock the SDK and require neither network calls nor geolocation permission. Verify actual map rendering separately in a WebGL 2-capable browser with a valid Mapbox token.
 
 ---
 
